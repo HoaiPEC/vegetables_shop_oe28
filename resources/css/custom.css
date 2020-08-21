@@ -20,3 +20,11 @@
 .slider-img-3 {
     background-image: url('../img/slide-homepage/bg_3.jpg');
 }
+.img-show {
+    width: 70px;
+    height: 70px;
+}
+.image-select {
+    width: 200px;
+    height: 200px;
+}

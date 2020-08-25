@@ -18,12 +18,11 @@ class PostController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     public function store(Request $request)
     {
-        //
     }
 
     public function show($id)

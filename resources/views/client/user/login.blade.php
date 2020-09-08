@@ -26,6 +26,10 @@
                         <div class="form-group">
                             <input type="submit" value="{{ trans('clients.login') }}" class="btn btn-primary py-3 px-5">
                         </div>
+                        <span href="#">{{ trans('clients.or_login') }}</span>
+                        <div class="flex-c p-b-112">
+                            <a href="redirect/facebook">FB Login</a>
+                        </div>
                     </form>
                 </div>
             </div>

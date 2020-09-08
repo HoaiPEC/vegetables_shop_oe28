@@ -514,3 +514,7 @@ input#quantity {
     width: 600px;
     height: 450px;
 }
+.col-md-6.order-md-last.d-flex {
+    margin: auto;
+    text-align: center;
+}

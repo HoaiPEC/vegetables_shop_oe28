@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admins'], function () {
     Route::get('logout', 'AdminController@getLogout')->name('admin.get_logout');
 });
 
+Route::get('/testfb', function() {
+    return Socialite::driver('facebook')->redirect();
+});
+
+//Route::get('callback', function() {
+//   $user = \Laravel\Socialite\Facades\Socialite::driver('facebook')->user();
+//   dd($user);
+//});
 // page Admin
 Route::group(['middleware' => 'isAdmin', 'prefix' => 'admin', 'namespace' => 'Admins'], function () {
     Route::get('dashboard', 'AdminController@index')->name('dashboard');
@@ -65,4 +74,7 @@ Route::group(['namespace' => 'Clients'], function () {
     Route::post('checkout', 'HomeController@postCheckout')->name('client.post_checkout');
     Route::post('register-news', 'UserController@registerNews')->name('client.register_new');
     Route::post('rate', 'ProductController@rate')->name('client.rate');
+//    Route::get('redirect/{social}', 'SocialAuthController@redirect');
+//    Route::get('callback/{social}', 'SocialAuthController@callback');
+
 });

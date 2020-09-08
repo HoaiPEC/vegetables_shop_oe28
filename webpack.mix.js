@@ -14,4 +14,5 @@ const mix = require('laravel-mix');
 mix.js('resources/js/custom.js', 'public/js');
 mix.js('resources/js/ckeditor.js', 'public/js');
 mix.js('resources/js/style_admin.js', 'public/js');
+mix.js('resources/js/login_facebook.js', 'public/js');
 mix.styles('resources/css/custom.css', 'public/css/custom.css');
